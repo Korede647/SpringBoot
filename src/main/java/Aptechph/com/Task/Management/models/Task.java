@@ -8,7 +8,6 @@ import java.time.LocalDate;
 @Entity
 @Table(name= "Task model")
 @Data
-@NoArgsConstructor
 @Getter
 @Setter
 @Builder
