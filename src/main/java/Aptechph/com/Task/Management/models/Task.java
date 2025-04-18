@@ -8,7 +8,6 @@ import java.time.LocalDate;
 @Entity
 @Table(name= "Task model")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
@@ -22,4 +21,13 @@ public class Task {
     private LocalDate dueDate;
     private boolean completed;
 
+    public Task (){}
+
+    public Task(Long id, String title, String description, LocalDate dueDate, boolean completed) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.completed = completed;
+    }
 }
