@@ -27,4 +27,5 @@ public class TaskController {
     public ResponseEntity<List<Task>> getAllTask(){
         return ResponseEntity.ok(taskService.getAll());
     }
+
 }
