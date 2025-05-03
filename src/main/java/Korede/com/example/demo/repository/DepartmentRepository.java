@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface DepartmentRepository extends JpaRepository<Department, Long> {
     List<Department> findByName(String name);
+
+    void deleteById(Long id);
+
+    boolean existsByName(String name);
 }

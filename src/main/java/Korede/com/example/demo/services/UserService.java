@@ -2,7 +2,6 @@ package Korede.com.example.demo.services;
 
 import Korede.com.example.demo.dto.RegisterUserDTO;
 import Korede.com.example.demo.dto.RegisterResponseDTO;
-import Korede.com.example.demo.dto.RegisterUserDTO;
 import Korede.com.example.demo.models.User;
 import org.springframework.stereotype.Service;
 

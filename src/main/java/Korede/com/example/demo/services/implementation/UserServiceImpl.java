@@ -38,12 +38,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getAUser(Long id) {
-        return null;
+        return (User) userRepository.findById(id).stream().toList();
     }
 
     @Override
     public String deleteUser(Long id) {
-        return "";
+        userRepository.deleteById(id);
+        String message = "User deleted successfully";
+        return message ;
     }
 
     @Override
