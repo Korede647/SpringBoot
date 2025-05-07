@@ -1,9 +1,12 @@
 package Korede.com.example.demo.dto;
 
 import jakarta.persistence.Entity;
+import jakarta.validation.constraints.NotBlank;
 
 public class DepartmentDTO {
+    @NotBlank (message = "Department name cannot be empty")
     private String name;
+    @NotBlank (message = "Description cannot be empty")
     private String description;
 
     public DepartmentDTO(String name, String description) {

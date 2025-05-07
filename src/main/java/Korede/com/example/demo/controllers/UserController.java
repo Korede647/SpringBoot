@@ -7,7 +7,6 @@ import Korede.com.example.demo.services.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -41,5 +40,15 @@ public class UserController {
     @GetMapping
     public RegisterResponseDTO getAllUsers(){
         return new RegisterResponseDTO();
+    }
+
+    @GetMapping
+    public Long getUserById(long id) {
+        User user = new User();
+        if (user.getId().equals(id)) {
+            return new RegisterResponseDTO().getStudentId();
+        }
+//        return new userID;
+        return null;
     }
 }
